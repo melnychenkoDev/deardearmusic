@@ -1,0 +1,16 @@
+section.first {
+	margin-bottom: 90px;
+
+	.text_content, .text_content a {
+		font-weight: 700;
+		font-size: 32px;
+		color: $text-main-color;
+	}
+
+	.text_content a {
+		text-decoration: underline;
+		cursor: pointer;
+		font-style: italic;
+	}
+
+}

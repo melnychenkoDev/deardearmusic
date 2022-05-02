@@ -1,0 +1,30 @@
+@import './base/var';
+
+section.first {
+	margin-bottom: 75px;
+}
+
+section.contacts {
+	margin-bottom: 180px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.contacts_item {
+
+		.label {
+			font-weight: 500;
+			font-size: 16px;
+			color: $text-faded-color;
+			margin-bottom: 15px;
+		}
+
+		a {
+			font-weight: 500;
+			font-size: 32px;
+			color: $text-main-color;
+		}
+
+	}
+
+}

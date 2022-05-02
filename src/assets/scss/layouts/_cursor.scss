@@ -1,0 +1,100 @@
+.hover-this {
+	transition: all $transition-fast;
+}
+
+.magnet-link {
+	position: relative;
+	display: inline-block;
+
+	//&:before {
+	//	content: "";
+	//	width: calc(100% + 40px);
+	//	left: 50%;
+	//	top: 50%;
+	//	height: calc(50% + 40px);
+	//	position: absolute;
+	//	transform: translate(-50%, -50%);
+	//}
+
+	span {
+		pointer-events: none;
+		display: block;
+		transition: transform 0.2s;
+	}
+}
+
+[class^="cursor"] {
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	z-index: $zindex-must;
+	mix-blend-mode: difference;
+	pointer-events: none;
+}
+
+.cursor-outer {
+	width: 30px;
+	height: 30px;
+	border: 1px solid $text-main-color;
+	transition: all .08s ease-out;
+}
+
+.cursor-inner {
+	width: 5px;
+	height: 5px;
+	background: $text-main-color;
+	display: none;
+}
+
+.cursor-view {
+	width: 10px;
+	height: 10px;
+	transition: width .08s ease-out, height .08s ease-out;
+	background: $text-main-color;
+	opacity: 0;
+	mix-blend-mode: normal;
+
+	&:before {
+		content: 'VIEW';
+		font-size: 14px;
+		font-weight: bold;
+		color: $text-dark-color;
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+}
+
+.cursor-inner.hovering-link {
+	opacity: 0;
+}
+
+.cursor-outer.hovering-link {
+	width: 50px;
+	height: 50px;
+	background-color: $text-main-color;
+}
+
+.cursor-inner.hovering-view, .cursor-outer.hovering-view {
+	opacity: 0;
+}
+
+.cursor-outer.hovering-view {
+	width: 10px;
+	height: 10px;
+}
+
+.cursor-view.hovering-view {
+	width: 70px;
+	height: 70px;
+	opacity: 1;
+}
+
+.cursor-inner.cursor-hide, .cursor-outer.cursor-hide, .cursor-view.cursor-hide {
+	width: 1px;
+	opacity: 0;
+}

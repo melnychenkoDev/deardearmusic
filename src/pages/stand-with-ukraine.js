@@ -1,0 +1,1 @@
+import '../assets/scss/stand-with-ukraine.scss';

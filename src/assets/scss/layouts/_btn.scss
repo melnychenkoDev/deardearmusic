@@ -1,0 +1,20 @@
+.btn, .inner-btn a {
+	display: inline-flex;
+	background-color: $btn-bg-color!important;
+	border: $btn-border!important;
+	border-radius: $btn-border-radius!important;
+	padding: 15px 40px!important;
+	font-weight: 700;
+	font-size: 14px;
+	color: $text-main-color!important;
+	text-transform: uppercase;
+	transition: background-color $transition-fast, color $transition-fast;
+	outline: none;
+	cursor: pointer;
+
+
+	&:hover {
+		color: $text-dark-color!important;
+		background-color: $btn-bg-color-hover!important;
+	}
+}

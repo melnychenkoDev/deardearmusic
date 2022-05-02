@@ -1,0 +1,120 @@
+footer {
+	padding-bottom: 75px;
+}
+
+.footer {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+
+	.left {
+		display: flex;
+		align-items: center;
+		gap: 100px;
+
+		.company-text {
+			font-weight: 700;
+			font-size: 14px;
+			color: $text-deep-color;
+		}
+
+	}
+
+	.right {
+		.follow-us {
+			position: relative;
+			padding-right: 40px;
+			font-weight: 700;
+			font-size: 16px;
+			color: $text-main-color;
+			cursor: pointer;
+
+			&:before {
+				content: '';
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				background-image: getFollowIcon();
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%);
+				transition: all $transition-fast;
+			}
+		}
+
+	}
+
+	.social-wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		transform: translateY(50px);
+		transition: all $transition-fast;
+
+		.socials {
+			margin: 0;
+			display: flex;
+			align-items: center;
+			gap: 30px;
+			margin-top: 10px;
+
+			&_item {
+				transition: all $transition-fast;
+				transform: scale(0);
+				opacity: 0;
+
+				a {
+					color: $text-main-color;
+					font-size: 14px;
+					font-weight: 600;
+					line-height: 40px;
+				}
+
+			}
+
+		}
+
+		&:hover {
+			transform: translateY(0);
+
+			.follow-us {
+				padding-right: 0;
+
+				&:before {
+					transform: translateY(-50%) scale(0);
+				}
+			}
+
+			.socials {
+
+				&_item {
+					transform: scale(1);
+					opacity: 1;
+				}
+
+			}
+		}
+
+	}
+
+}
+
+a.hashtag-ukr, .hashtag-ukr {
+	font-weight: 600;
+	font-size: 14px;
+	color: $text-main-color;
+	position: relative;
+	padding-left: 50px;
+
+	&:after {
+		content: '';
+		position: absolute;
+		background-image: getUkrFlagIcon();
+		width: 40px;
+		height: 25px;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+
+}

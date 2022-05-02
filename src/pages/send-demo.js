@@ -1,0 +1,1 @@
+import '../assets/scss/send-demo.scss';

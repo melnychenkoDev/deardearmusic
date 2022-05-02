@@ -1,0 +1,45 @@
+@import './base/var';
+
+.contacts_wrapper {
+	margin-bottom: 180px;
+	display: flex;
+	align-items: center;
+	gap: 70px;
+
+	.contacts {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+
+		.label {
+			font-weight: 500;
+			font-size: 16px;
+			color: $text-faded-color;
+			margin-bottom: 10px;
+		}
+
+		a {
+			font-weight: 500;
+			font-size: 24px;
+			color: $text-main-color;
+		}
+
+	}
+
+	@media (max-width: $displayWidthLg) {
+		flex-direction: column;
+		gap: 40px;
+		align-items: flex-start;
+
+		.map {
+			width: 100%;
+
+			iframe {
+				width: 100%;
+			}
+
+		}
+
+	}
+
+}
