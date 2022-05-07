@@ -4,6 +4,14 @@
 	align-items: center;
 	margin-bottom: 70px;
 
+	@media (max-width: $displayWidthLg) {
+		margin-bottom: 50px;
+	}
+
+	@media (max-width: $displayWidthMd) {
+		margin-bottom: 30px;
+	}
+
 	.logo {
 		img {
 			@media (max-width: $displayWidthLg) {
