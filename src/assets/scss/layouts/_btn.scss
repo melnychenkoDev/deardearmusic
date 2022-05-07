@@ -12,9 +12,40 @@
 	outline: none;
 	cursor: pointer;
 
-
 	&:hover {
 		color: $text-dark-color!important;
 		background-color: $btn-bg-color-hover!important;
 	}
+
+	&.btn-outline {
+		background-color: transparent!important;
+		border: $btn-border-outline!important;
+		color: $text-dark-color!important;
+
+		&:hover {
+			color: $text-main-color!important;
+			background-color: $btn-outline-bg-color-hover!important;
+		}
+
+	}
+
+}
+
+.inner-btn.btn-outline a {
+	background-color: transparent!important;
+	border: $btn-border-outline!important;
+	color: $text-dark-color!important;
+
+	&:hover {
+		color: $text-main-color!important;
+		background-color: $btn-outline-bg-color-hover!important;
+	}
+}
+
+.inner-btn.btn-shrink a {
+	display: flex;
+}
+
+.inner-btn.btn-shrink a {
+	justify-content: center;
 }

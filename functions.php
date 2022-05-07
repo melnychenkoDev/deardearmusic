@@ -50,6 +50,7 @@ function ddm_setup() {
 	register_nav_menus(
 		array(
 			'main_menu' => esc_html__( 'Main menu', 'ddm' ),
+			'main_mob_menu' => esc_html__( 'Main mobile menu', 'ddm' ),
 		)
 	);
 

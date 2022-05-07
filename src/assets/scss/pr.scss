@@ -2,6 +2,10 @@
 
 section.first {
 	margin-bottom: 75px;
+
+	@media (max-width: $displayWidthMd) {
+		margin-bottom: 35px;
+	}
 }
 
 section.contacts {
@@ -27,4 +31,39 @@ section.contacts {
 
 	}
 
+	@media (max-width: $displayWidthLg) {
+		flex-direction: column;
+		gap: 35px;
+		justify-content: flex-start;
+		align-items: flex-start;
+
+		.contacts_item {
+
+			.label {
+				margin-bottom: 10px;
+			}
+
+			a {
+				font-size: 24px;
+			}
+
+		}
+
+	}
+
+	@media (max-width: $displayWidthMd) {
+		.contacts_item {
+
+			.label {
+				font-size: 14px;
+			}
+
+			a {
+				font-size: 18px;
+			}
+
+		}
+
+	}
+	
 }

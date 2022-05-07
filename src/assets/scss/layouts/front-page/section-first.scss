@@ -1,9 +1,11 @@
 section.first {
 	margin-bottom: 90px;
 
+	@media (max-width: $displayWidthMd) {
+		margin-bottom: 50px;
+	}
+
 	.text_content, .text_content a {
-		font-weight: 700;
-		font-size: 32px;
 		color: $text-main-color;
 	}
 

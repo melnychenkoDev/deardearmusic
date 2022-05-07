@@ -235,6 +235,16 @@ img {
 	line-height: 140%;
 	color: $text-main-color;
 	margin-bottom: 30px;
+	
+	@media (max-width: $displayWidthLg) {
+		font-size: 24px;
+	}
+
+	@media (max-width: $displayWidthMd) {
+		font-size: 18px;
+		margin-bottom: 15px;
+	}
+	
 }
 
 .page-text {

@@ -5,6 +5,25 @@ section.stand-with-ukraine {
 
 	.vide_wrapper {
 		margin-bottom: 45px;
+
+		iframe {
+			height: 80vh;
+		}
+
+		@media (max-width: $displayWidthLg) {
+			iframe {
+				height: 60vh;
+			}
+		}
+
+		@media (max-width: $displayWidthMd) {
+			margin-bottom: 30px;
+
+			iframe {
+				height: 40vh;
+			}
+		}
+
 	}
 
 	.to-help-link {

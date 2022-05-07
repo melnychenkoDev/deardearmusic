@@ -126,4 +126,12 @@ export default function cursor() {
 
 	cursorMouseEvents();
 
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+		if (cursorOuter && cursorInner && cursorView) {
+			cursorOuter.classList.add('cursor-hide');
+			cursorInner.classList.add('cursor-hide');
+			cursorView.classList.add('cursor-hide');
+		}
+	}
+
 }
