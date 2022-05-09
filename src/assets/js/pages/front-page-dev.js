@@ -8,7 +8,7 @@ Swiper.use(Autoplay);
 document.addEventListener('DOMContentLoaded', () => {
 
 	const labelsSlider = new Swiper(".labelsSlider", {
-		slidesPerView: 3,
+		slidesPerView: 2,
 		spaceBetween: 15,
 		speed: 5000,
 		autoplay: {
@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		loop: true,
 		breakpoints: {
 			768: {
+				slidesPerView: 3,
 				spaceBetween: 30,
 			},
 			1024: {
