@@ -66,6 +66,16 @@
 							left: 0;
 							transform: translateY(-50%);
 						}
+
+						&:before {
+							content: '#standwithukraine';
+							position: absolute;
+							text-transform: none;
+							font-weight: 500;
+							font-size: 12px;
+							left: 40px;
+							bottom: -12px;
+						}
 					}
 
 				}

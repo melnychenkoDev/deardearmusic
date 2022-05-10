@@ -13,8 +13,12 @@
 					<div class="follow-us hover-this">Follow Us</div>
 					<ul class="socials">
 						<?php while (have_rows('social_networks', 'option')) : the_row(); ?>
+						<?php
+								$svgImg = get_sub_field('social_networks_svg_img');
+								$shortName = get_sub_field('social_networks_name');
+							?>
 							<li class="socials_item">
-								<a class="hover-this magnet-link" href="<?php the_sub_field('social_networks_link'); ?>" title="<?php the_sub_field('social_networks_full_name'); ?>" target="_blank" ><span data-magnet="item"><?php the_sub_field('social_networks_name'); ?></span></a>
+								<a class="hover-this magnet-link" href="<?php the_sub_field('social_networks_link'); ?>" title="<?php the_sub_field('social_networks_full_name'); ?>" target="_blank" ><span data-magnet="item"><?= $svgImg ? $svgImg : $shortName ?></span></a>
 							</li>
 						<?php endwhile; ?>
 					</ul>

@@ -26,8 +26,83 @@ section.stand-with-ukraine {
 
 	}
 
-	.to-help-link {
-		margin-top: 10px;
+	.to_help_links_tit {
+		font-weight: 600;
+		font-size: 18px;
+		color: $text-main-color;
+		margin-bottom: 20px;
+
+		@media (max-width: $displayWidthMd) {
+			font-size: 16px;
+		}
+	}
+
+	.to_help_links {
+		display: flex;
+		gap: 40px;
+		align-items: stretch;
+		flex-wrap: wrap;
+
+		.to_help_link {
+			position: relative;
+			padding: 25px;
+			border: 1px solid $text-main-color;
+			color: $text-main-color;
+			font-weight: 700;
+			font-size: 14px;
+			flex-basis: 160px;
+			transition: all $transition-fast;
+
+			&:after {
+				content: '';
+				position: absolute;
+				background-image: getArrowRightMinIcon();
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center;
+				width: 20px;
+				height: 10px;
+				left: 25px;
+				bottom: 15px;
+				transition: transform $transition-fast;
+			}
+
+			&:hover {
+				background-color: $text-main-color;
+				color: $text-dark-color;
+
+				&:after {
+					transform: translateX(5px);
+					background-image: getArrowRightMinIcon($text-dark-color);
+				}
+
+			}
+
+
+		}
+
+		@media (max-width: $displayWidthMd) {
+			gap: 30px;
+
+			.to_help_link {
+				flex-basis: calc(50% - 15px);
+			}
+		}
+
+		@media (max-width: $displayWidthSm) {
+			gap: 20px;
+
+			.to_help_link {
+				padding: 15px;
+				flex-basis: calc(50% - 10px);
+
+				&:after {
+					left: 15px;
+					bottom: 8px;
+				}
+			}
+		}
+
 	}
 
 }
