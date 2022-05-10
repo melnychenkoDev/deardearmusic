@@ -38,7 +38,7 @@ export default function header() {
 		const menuOpenBtns = document.querySelectorAll('.menu_open_btn');
 		const mobMenu = document.querySelector('#mob-menu');
 		const overlay = document.querySelector('.overlay');
-		const menuItemHasChild = document.querySelectorAll('.menu-item-has-children');
+		const menuItemHasChild = mobMenu.querySelectorAll('.menu-item-has-children');
 
 		if (menuOpenBtns) {
 			menuOpenBtns.forEach(el => {
